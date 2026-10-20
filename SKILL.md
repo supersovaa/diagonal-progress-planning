@@ -1,68 +1,71 @@
 ---
 name: diagonal-progress-planning
-description: Coordinate staged implementation planning across multiple completion targets by establishing cross-target result dependencies and a revisable coarse order, projecting diagonal progress, and updating only affected plans.
+description: Arrange and revise staged implementation progress for one or more completion targets using partial-result prerequisites, cross-target coordination when needed, and incremental projections.
 ---
 
 # Diagonal Progress Planning
 
-Use this skill when planning or revising staged implementation progress across multiple separately identifiable completion targets.
+Use this skill when arranging or revising staged implementation progress for one or more completion targets.
 
 Use each target's owning workflow to define its completion boundary, local implementation plans, and completion criteria.
-Use ordinary `plan-driven-planning` for plan boundaries, dependency semantics, authoritative records, durable states, and concurrency constraints.
-This skill coordinates results across targets without redefining those responsibilities.
+Use `plan-driven-planning` for plan boundaries, direct-dependency semantics, authoritative records, durable states, and concurrency constraints.
+This skill coordinates the progression of partial results without redefining those responsibilities.
 
 ## Start from available results
 
 Read the established and planned results, direct dependencies, and relevant completion targets from the repository's current planning state.
-Include the targets currently relevant to the requested work; extend the analysis as other targets become relevant.
 Use target-local planning to create or refine independently establishable and verifiable partial results.
-Proceed with unrelated supported results while other targets still need local planning.
+Plan from the results currently supported by settled requirements and existing work; extend the projection as further results become relevant.
+Progress within one target does not require other targets to be planned. Continue arranging unrelated supported work while another target still needs local planning.
 
-## Relate results across targets
+## Relate prerequisite results
 
-Compare the partial results that may be needed by more than one target.
-When another target needs a prerequisite, record a direct dependency on the specific result that supplies it, rather than requiring completion of its entire target.
-Keep independently establishable producing results separate; attach combination dependencies to the first result that actually requires the combination.
+For each relevant partial result, use established direct dependencies to identify which preceding results it requires.
+Keep independently establishable producing results separate; attach a combination dependency to the first plan result that actually requires the combination.
 Treat implementation scope and result dependencies separately.
 Use isolated test setup as evidence of a result's independent validity, not as the definition of repository-level dependencies.
 
-When targets require the same established responsibility or behavior, identify one authoritative producing result and let the other targets reference it.
+When multiple targets are relevant, compare their partial results and record cross-target direct dependencies on the specific prerequisite plan result, rather than requiring an entire preceding target to complete.
+When targets require the same established responsibility or behavior, identify one authoritative producing result and let other targets reference it.
 Base reuse on settled requirements, design, current repository behavior, or confirmed plan boundaries.
 A shared helper, file, type, or module alone does not establish a result dependency.
-Keep production and target membership in the owning local workflow; a result can serve multiple targets without gaining multiple authoritative owners.
+Keep the producing plan's ownership and target membership with the owning local workflow; one result may serve several targets.
 
 Record confirmed direct dependencies using the ordinary planning index convention.
-When the needed boundary cannot be represented because a local plan combines independently establishable results, return that target to local planning for decomposition.
-Return invalid local dependencies or unresolved requirements to their owning workflow while keeping unaffected targets available.
+If a needed result boundary cannot be represented because a local plan combines independently establishable results, return it to target-local planning for decomposition.
+Return invalid local dependencies or unresolved requirements to their owning workflow while keeping unaffected results available.
 
-## Establish diagonal progress
+## Arrange staged progress
 
-Derive a coarse, revisable implementation order from confirmed prerequisites.
-Identify targets that can start independently, targets whose first useful result becomes viable later, and results that must wait for prerequisites.
-Introduce another target when its first useful result is viable; completion of an earlier target is not a prerequisite unless a specific required result establishes that dependency.
-Keep independent viable branches unordered.
-When multiple valid orders remain, prefer progress that establishes useful target behavior sooner; favor lighter additional work where grounded effort and complexity support the distinction.
-Keep tied or uncertain alternatives at the same priority.
+Derive a coarse, revisable progression through the partial results of the targets currently in scope.
+For a single target, advance its useful partial results as their prerequisites are established or projected.
+For multiple targets, identify independently startable targets and introduce another target when its first useful result becomes viable; the earlier target need not complete first.
+Interleave viable target steps when doing so makes useful target behavior available sooner.
+Preserve independent viable branches as a partial order rather than inventing dependency edges to encode a preferred sequence.
 
-Project only the partial results needed to guide the work currently being planned.
-As a projected result becomes available in the planning scenario, reassess affected targets and dependencies.
-Treat projection as revisable planning guidance, not as a completed plan state or a committed execution schedule.
+Among supported alternatives, prefer earlier useful progress and lighter incremental work when the available planning information supports a difference.
+Compare additional work beyond already established or planned results, and keep tied or uncertain alternatives at the same priority.
 
-## Revise affected work
+Project only the results needed to guide the requested work.
+After placing a projected milestone, treat its expected result as available within that planning projection and reassess affected eligible work.
+Continue until the requested target or targets are represented by sufficient planned structure.
+A projected result is planning guidance, not an established repository result, a completed durable plan state, or an execution commitment.
+
+## Revise affected progress
 
 Start revisions from the repository's established planning state.
-Trace a changed result or dependency through the planned work that actually depends on it.
-Revise the affected cross-target dependencies, coarse order, and progress projections until they are consistent again, preserving unrelated established decisions and independent branches.
-Return changes to target-local plan boundaries and completion conditions to their owning workflow.
-Use the ordinary plan-driven replanning rules when an implementation attempt has invalidated a plan boundary.
+Trace a changed result or dependency through the planned results that actually depend on it.
+Revise the affected dependencies, coarse order, and progress projections while preserving unaffected plans and independent branches.
+Return changes to target-local plan boundaries or completion conditions to their owning workflow.
+Use ordinary plan-driven replanning rules when an implementation attempt invalidates a plan boundary.
 
 ## Record and hand off
 
 Keep confirmed direct dependencies distinct from preferred order and projected milestones.
-Record coarse order in an appropriate existing Markdown planning document; no special file format or independently mutable progress status is required.
+Record useful coarse order in an appropriate existing Markdown planning document; no special file format or independently mutable progress status is required.
 Leave plan-level concurrency conflicts to ordinary implementation planning.
-When a workflow uses synchronized waves, leave exact wave assignment, wave fixing, and execution eligibility to its wave-planning rules.
-This cross-target analysis is not a gate for arranging unrelated eligible work.
+When synchronized waves are used, wave planning owns exact placement, fixedness, the pre-execution gate, and execution eligibility.
+Progress projection does not gate the arrangement of unrelated eligible work.
 
-This skill owns cross-target result coordination, coarse diagonal order, incremental projection, and affected-progress revision.
-Target-local decomposition, target completion and testing rules, synchronized wave placement, execution, and implementation review belong to their respective workflows.
+This skill owns staged progress through partial results for one or more completion targets, cross-target result coordination when needed, incremental projection, and affected-progress revision.
+Target-local decomposition, completion and testing rules, synchronized wave placement, execution, and implementation review belong to their respective workflows.
