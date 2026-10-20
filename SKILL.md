@@ -52,7 +52,8 @@ Treat projection as revisable planning guidance, not as a completed plan state o
 
 Start revisions from the repository's established planning state.
 Trace a changed result or dependency through the planned work that actually depends on it.
-Revise that affected portion until the projected progress is consistent again, preserving unrelated established decisions and independent branches.
+Revise the affected cross-target dependencies, coarse order, and progress projections until they are consistent again, preserving unrelated established decisions and independent branches.
+Return changes to target-local plan boundaries and completion conditions to their owning workflow.
 Use the ordinary plan-driven replanning rules when an implementation attempt has invalidated a plan boundary.
 
 ## Record and hand off
