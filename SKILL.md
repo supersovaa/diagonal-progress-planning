@@ -5,7 +5,7 @@ description: Coordinate staged implementation planning across multiple completio
 
 # Diagonal Progress Planning
 
-Use this skill when planning or revising staged implementation progress across multiple independently completable targets.
+Use this skill when planning or revising staged implementation progress across multiple separately identifiable completion targets.
 
 Use each target's owning workflow to define its completion boundary, local implementation plans, and completion criteria.
 Use ordinary `plan-driven-planning` for plan boundaries, dependency semantics, authoritative records, durable states, and concurrency constraints.
