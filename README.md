@@ -1,6 +1,6 @@
 # diagonal-progress-planning
 
-Plan staged progress across multiple independently completable targets without requiring one target to finish before another begins.
+Plan staged progress across multiple separately identifiable completion targets without requiring one target to finish before another begins.
 
 ## Skill
 
