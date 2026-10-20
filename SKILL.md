@@ -24,6 +24,7 @@ Compare the partial results that may be needed by more than one target.
 When another target needs a prerequisite, record a direct dependency on the specific result that supplies it, rather than requiring completion of its entire target.
 Keep independently establishable producing results separate; attach combination dependencies to the first result that actually requires the combination.
 Treat implementation scope and result dependencies separately.
+Use isolated test setup as evidence of a result's independent validity, not as the definition of repository-level dependencies.
 
 When targets require the same established responsibility or behavior, identify one authoritative producing result and let the other targets reference it.
 Base reuse on settled requirements, design, current repository behavior, or confirmed plan boundaries.
