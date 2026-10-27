@@ -25,7 +25,7 @@ Keep independently establishable producing results separate; attach a combinatio
 Treat implementation scope and result dependencies separately.
 Use isolated test setup as evidence of a result's independent validity, not as the definition of repository-level dependencies.
 
-When multiple targets are relevant, compare their partial results. Record cross-target direct dependencies on the specific producing plan while its prerequisite result is still pending on the relevant base branch, rather than requiring an entire preceding target to complete.
+When multiple targets are relevant, compare their partial results. Record cross-target direct dependencies on the specific producing plan while implementation of its prerequisite result is still pending, rather than requiring an entire preceding target to complete. When a completed producing plan's result awaits integration into the relevant base branch, track that integration requirement using ordinary planning rules.
 When targets use the same already-established responsibility or behavior, reference its current requirements/design canon and verified repository baseline. When a shared result is still planned, identify one authoritative producing plan for all dependent targets.
 Base reuse on settled requirements, design, current repository behavior, or confirmed plan boundaries.
 A shared helper, file, type, or module alone does not establish a result dependency.
