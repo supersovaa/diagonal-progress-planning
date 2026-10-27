@@ -16,7 +16,7 @@ The skill follows the phase separation used by [cell-complete-development](https
 - A target workflow's wave-planning skill owns wave assignment, pre-execution gates, and synchronization when waves are used. Diagonal progress does not require waves.
 - Target-specific review owns behavioral completion and testing obligations.
 
-A planned result may contribute to several targets while retaining one authoritative producer. Preferred order is guidance; only actual result prerequisites establish direct dependencies.
+A pending implementation result may contribute to several targets while retaining one authoritative producing plan. Established results are referenced through current canon and verified repository behavior; completed results awaiting integration carry an integration prerequisite instead. Preferred order is guidance; only pending implementation results establish direct plan dependencies.
 
 ## Installation
 

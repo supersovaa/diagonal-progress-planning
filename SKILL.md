@@ -13,7 +13,7 @@ This skill coordinates the progression of partial results without redefining tho
 
 ## Start from available results
 
-Read the established and planned results, direct dependencies, and relevant completion targets from the repository's current planning state.
+Read established results from current settled requirements/design and verified behavior on the relevant base branch; read pending results, direct dependencies, and completion targets from the repository's current planning state. Use completed plans as historical evidence when needed.
 Use target-local planning to create or refine independently establishable and verifiable partial results.
 Plan from the results currently supported by settled requirements and existing work; extend the projection as further results become relevant.
 Progress within one target does not require other targets to be planned. Continue arranging unrelated supported work while another target still needs local planning.
@@ -25,8 +25,8 @@ Keep independently establishable producing results separate; attach a combinatio
 Treat implementation scope and result dependencies separately.
 Use isolated test setup as evidence of a result's independent validity, not as the definition of repository-level dependencies.
 
-When multiple targets are relevant, compare their partial results and record cross-target direct dependencies on the specific prerequisite plan result, rather than requiring an entire preceding target to complete.
-When targets require the same established responsibility or behavior, identify one authoritative producing result and let other targets reference it.
+When multiple targets are relevant, compare their partial results. Record cross-target direct dependencies on the specific producing plan while implementation of its prerequisite result is still pending, rather than requiring an entire preceding target to complete. When a completed producing plan's result awaits integration into the relevant base branch, track that integration requirement using ordinary planning rules.
+When targets use the same already-established responsibility or behavior, reference its current requirements/design canon and verified repository baseline. When a shared result is still planned, identify one authoritative producing plan for all dependent targets.
 Base reuse on settled requirements, design, current repository behavior, or confirmed plan boundaries.
 A shared helper, file, type, or module alone does not establish a result dependency.
 Keep the producing plan's ownership and target membership with the owning local workflow; one result may serve several targets.
