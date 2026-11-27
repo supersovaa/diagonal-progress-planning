@@ -1,15 +1,14 @@
 ---
 name: diagonal-progress-planning
-description: Arrange and revise staged implementation progress for one or more completion targets using partial-result prerequisites, cross-target coordination when needed, and incremental projections.
+description: Plan or revise staged implementation for one or more completion targets. Order partial results by prerequisite and coordinate targets where needed.
 ---
 
 # Diagonal Progress Planning
 
-Use this skill when arranging or revising staged implementation progress for one or more completion targets.
+Coordinate partial results for one or more completion targets.
 
-Use each target's owning workflow to define its completion boundary, local implementation plans, and completion criteria.
-Use `plan-driven-planning` for plan boundaries, direct-dependency semantics, authoritative records, durable states, and concurrency constraints.
-This skill coordinates the progression of partial results without redefining those responsibilities.
+- Each target’s owning workflow defines its completion boundary, local plans, and completion criteria.
+- `plan-driven-planning` governs plan boundaries, direct dependencies, authoritative records, durable states, and concurrency constraints.
 
 ## Start from available results
 
